@@ -21,7 +21,7 @@ const KafkaConsumer: React.FC<ConsumerProps> = ({ topics }) => {
   const [messages, setMessages] = useState<Message[]>([]);
   const [loading, setLoading] = useState(false);
   const [autoRefresh, setAutoRefresh] = useState(false);
-  const [messageLimit, setMessageLimit] = useState(10);
+  const [messageLimit, setMessageLimit] = useState(5);
 
   const fetchMessages = async () => {
     if (!selectedTopic) return;

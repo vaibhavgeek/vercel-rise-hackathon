@@ -77,7 +77,7 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({ topic = 'mcp_agent_queen'
 
   const loadInitialMessages = async () => {
     try {
-      const response = await fetch(`/api/kafka/consume?topic=${topic}&limit=10`);
+      const response = await fetch(`/api/kafka/consume?topic=${topic}&limit=5`);
       const data = await response.json();
 
       if (data.success && data.messages) {
